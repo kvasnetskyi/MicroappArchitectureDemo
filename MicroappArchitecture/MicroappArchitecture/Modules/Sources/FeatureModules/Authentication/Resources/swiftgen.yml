@@ -1,0 +1,15 @@
+xcassets:
+  - inputs: Process/Images.xcassets
+    outputs:
+      templateName: swift5
+      output: Generated/Assets.swift
+      params:
+        enumName: Assets
+        
+strings:
+  - inputs: Process/Localizations/en.lproj
+    outputs:
+      templateName: structured-swift5
+      output: Generated/Localization.swift
+      params:
+        enumName: Localization

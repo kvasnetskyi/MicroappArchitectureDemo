@@ -1,0 +1,15 @@
+/*
+  Localizable.strings
+  
+
+  Created by Artem Kvasnetskyi on 02.01.2023.
+  
+*/
+
+// MARK: - General
+"Error" = "Error";
+"Ok" = "OK";
+"Done" = "Done";
+"Cancel" = "Cancel";
+"Skip" = "Skip";
+"Choose.Option" = "Choose option";

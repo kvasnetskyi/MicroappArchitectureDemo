@@ -1,0 +1,32 @@
+xcassets:
+  - inputs: MicroappArchitecture/Modules/Sources/UIModules/Resources/Process/Images.xcassets
+    outputs:
+      templateName: swift5
+      output: MicroappArchitecture/Modules/Sources/UIModules/Resources/Generated/ReusableAssets.swift
+      params:
+        enumName: ReusableAssets
+        publicAccess: 1
+  - inputs: MicroappArchitecture/Modules/Sources/UIModules/Resources/Process/Colors.xcassets
+    outputs:
+      templateName: swift5
+      output: MicroappArchitecture/Modules/Sources/UIModules/Resources/Generated/Colors.swift
+      params:
+        enumName: Colors
+        publicAccess: 1
+        
+strings:
+  - inputs: MicroappArchitecture/Modules/Sources/UIModules/Resources/Process/Localizations/en.lproj
+    outputs:
+      templateName: structured-swift5
+      output: MicroappArchitecture/Modules/Sources/UIModules/Resources/Generated/ReusableLocalization.swift
+      params:
+        enumName: ReusableLocalization
+        publicAccess: 1
+
+fonts:
+  inputs: MicroappArchitecture/Modules/Sources/UIModules/Resources/Process/Fonts
+  outputs:
+    templateName: swift5
+    output: MicroappArchitecture/Modules/Sources/UIModules/Resources/Generated/Fonts.swift
+    params:
+      publicAccess: 1

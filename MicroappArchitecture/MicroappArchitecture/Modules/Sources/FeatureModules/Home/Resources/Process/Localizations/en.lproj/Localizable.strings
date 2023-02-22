@@ -1,0 +1,12 @@
+/*
+  Localizable.strings
+  
+
+  Created by Artem Kvasnetskyi on 02.01.2023.
+  
+*/
+
+// MARK: - Home
+"Home.Title" = "Home";
+"Gender.Prefix" = "Gender:";
+"Species.Prefix" = "Species:";

@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "combinenetworking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kvasnetskyi/CombineNetworking",
+      "state" : {
+        "revision" : "13c7f0678c0cce66c5fc844f3ea415c1caa93ac1",
+        "version" : "0.1.3"
+      }
+    },
+    {
+      "identity" : "keyboardlayoutguide",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/freshOS/KeyboardLayoutGuide",
+      "state" : {
+        "revision" : "b14abc2ff6a6b934b81b7004edb65f910ac68bdc",
+        "version" : "1.8.0"
+      }
+    },
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher",
+      "state" : {
+        "revision" : "90135885ef506506620c4911cefb55a95ca2a9a2",
+        "version" : "7.5.0"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject",
+      "state" : {
+        "revision" : "8bc503e60965298984fb58cf47b71c541449fe2a",
+        "version" : "2.8.3"
+      }
+    }
+  ],
+  "version" : 2
+}

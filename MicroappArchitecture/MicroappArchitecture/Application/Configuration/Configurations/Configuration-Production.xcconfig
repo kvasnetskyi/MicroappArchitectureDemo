@@ -1,0 +1,13 @@
+//
+//  Configuration-Production.xcconfig
+//  MicroappArchitecture
+//
+//  Created by Artem Kvasnetskyi on 12.10.2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_ENVIRONMENT = production
+APP_NAME = MicroappArchitectureProduction
+APP_BUNDLE_ID = com.kvasnetskyi.MicroappArchitecture.prod

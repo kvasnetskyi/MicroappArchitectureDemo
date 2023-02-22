@@ -1,0 +1,13 @@
+//
+//  Configuration-Development.xcconfig
+//  MicroappArchitecture
+//
+//  Created by Artem Kvasnetskyi on 12.10.2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_ENVIRONMENT = development
+APP_NAME = MicroappArchitectureDevelopment
+APP_BUNDLE_ID = com.kvasnetskyi.MicroappArchitecture.dev

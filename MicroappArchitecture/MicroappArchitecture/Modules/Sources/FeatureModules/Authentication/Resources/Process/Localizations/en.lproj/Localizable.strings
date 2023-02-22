@@ -1,0 +1,18 @@
+/*
+  Localizable.strings
+  
+
+  Created by Artem Kvasnetskyi on 02.01.2023.
+  
+*/
+
+// MARK: - Reusable
+"Credentials.Email.Title" = "Email";
+"Credentials.Password.Title" = "Password";
+"Credentials.Password.Confirm.Title" = "Confirm Password";
+
+// MARK: - Sign In
+"Sign.In.Title" = "Sign In";
+
+// MARK: - Sign Up
+"Sign.Up.Title" = "Sign Up";

@@ -1,0 +1,13 @@
+//
+//  Configuration-Staging.xcconfig
+//  MicroappArchitecture
+//
+//  Created by Artem Kvasnetskyi on 12.10.2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_ENVIRONMENT = staging
+APP_NAME = MicroappArchitectureStaging
+APP_BUNDLE_ID = com.kvasnetskyi.MicroappArchitecture.stage
