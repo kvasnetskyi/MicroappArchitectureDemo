@@ -1,7 +1,7 @@
 # Microapp Architecture Demo
 The application provides an example of a Microapp architecture implementation using the Swift Package Manager.
 
-More theory can be found below. Also, you can find more information in a [presentation](https://www.icloud.com/keynote/05djyPSMLk4tcXk1bA6WmiJCQ#Microapp_Report) and [video](https://chiswdevelopment-my.sharepoint.com/:v:/g/personal/oksana_fedoseeva_chisw_com/EVRrMBkI919Jj4nUdbaUeGMBcFZ90btRZKk6IxDofLPwZQ).
+More theory can be found below. Also, you can find more information in a [presentation](https://www.icloud.com/keynote/05djyPSMLk4tcXk1bA6WmiJCQ#Microapp_Report), [video (only for CHI company)](https://chiswdevelopment-my.sharepoint.com/:v:/g/personal/oksana_fedoseeva_chisw_com/EVRrMBkI919Jj4nUdbaUeGMBcFZ90btRZKk6IxDofLPwZQ), and [Medium articles](https://medium.com/@artemkvasnetcky/ios-microapp-architecture-part-1-50cd2bcaccd6).
 
 1. [Problem](#problem)
 2. [Modular Architecture](#modular-architecture)
