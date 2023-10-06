@@ -6,14 +6,12 @@
 //
 
 import SwiftUI
-import Navigation
 import Resources
 import Views
 import Base
 
 struct SignUpView<VM: SignUpViewModel>: View {
     // MARK: - Internal Properties
-    @EnvironmentObject var navigation: NavigationStore<Route>
     @StateObject var viewModel: VM
     
     // MARK: - Body
@@ -26,9 +24,6 @@ struct SignUpView<VM: SignUpViewModel>: View {
             }
             .buttonStyle(AppButtonStyle())
             .disabled(!viewModel.isSignUpActive)
-            .accessibilityIdentifier(
-                AuthUIIdentifiers.signUpButton.rawValue
-            )
             
             Spacer()
         }
@@ -67,13 +62,6 @@ private struct C {
 }
 
 // MARK: - Preview Provider
-struct SignUpView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignUpView(
-            viewModel: SignUpViewModelImpl(
-                SignUpModelImpl(dependencies: .placeholder),
-                signUpPassed: ()
-            )
-        )
-    }
+#Preview {
+    SignUpView(viewModel: SignUpViewModelImpl.placeholder)
 }

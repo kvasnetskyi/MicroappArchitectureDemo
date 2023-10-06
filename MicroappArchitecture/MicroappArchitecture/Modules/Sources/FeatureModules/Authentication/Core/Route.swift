@@ -11,8 +11,3 @@ enum Route: Hashable {
     case signIn
     case signUp
 }
-
-enum Transition {
-    case route(_ route: Route)
-    case pop
-}

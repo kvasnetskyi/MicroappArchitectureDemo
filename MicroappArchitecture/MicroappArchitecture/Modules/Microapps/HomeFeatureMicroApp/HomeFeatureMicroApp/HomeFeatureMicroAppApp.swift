@@ -15,7 +15,7 @@ struct HomeFeatureMicroApp: App {
     var body: some Scene {
         WindowGroup {
             HomeRoot(
-                factory: .init(
+                dependencies: .init(
                     .init(
                         .init(
                             loadCharactersAction: {

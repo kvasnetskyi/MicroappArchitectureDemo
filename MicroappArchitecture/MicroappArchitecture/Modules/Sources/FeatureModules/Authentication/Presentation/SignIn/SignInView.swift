@@ -6,14 +6,12 @@
 //
 
 import SwiftUI
-import Navigation
 import Resources
 import Views
 import Base
 
 struct SignInView<VM: SignInViewModel>: View {
     // MARK: - Internal Properties
-    @EnvironmentObject var navigation: NavigationStore<Route>
     @StateObject var viewModel: VM
     
     // MARK: - Body
@@ -26,9 +24,6 @@ struct SignInView<VM: SignInViewModel>: View {
             }
             .buttonStyle(AppButtonStyle())
             .disabled(!viewModel.isSignInActive)
-            .accessibilityIdentifier(
-                AuthUIIdentifiers.signInButton.rawValue
-            )
             
             Spacer()
         }
@@ -47,16 +42,10 @@ private extension SignInView {
                 placeholder: Localization.Credentials.Email.title,
                 text: $viewModel.email
             )
-            .accessibilityIdentifier(
-                AuthUIIdentifiers.emailField.rawValue
-            )
             
             AppTextField(
                 placeholder: Localization.Credentials.Password.title,
                 text: $viewModel.password
-            )
-            .accessibilityIdentifier(
-                AuthUIIdentifiers.passwordField.rawValue
             )
         }
     }
@@ -68,13 +57,6 @@ private struct C {
 }
 
 // MARK: - Preview Provider
-struct SignInView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInView(
-            viewModel: SignInViewModelImpl(
-                SignInModelImpl(dependencies: .placeholder),
-                signInPassed: ()
-            )
-        )
-    }
+#Preview {
+    SignInView(viewModel: SignInViewModelImpl.placeholder)
 }

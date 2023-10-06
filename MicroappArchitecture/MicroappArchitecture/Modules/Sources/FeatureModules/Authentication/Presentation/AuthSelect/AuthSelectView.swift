@@ -6,12 +6,10 @@
 //
 
 import SwiftUI
-import Navigation
 import Views
 
 struct AuthSelectView<VM: AuthSelectViewModel>: View {
     // MARK: - Internal Properties
-    @EnvironmentObject var navigation: NavigationStore<Route>
     @StateObject var viewModel: VM
     
     // MARK: - Body
@@ -23,14 +21,6 @@ struct AuthSelectView<VM: AuthSelectViewModel>: View {
             buttons()
         }
         .padding(.horizontal)
-        .onReceive(viewModel.transition) { transition in
-            switch transition {
-            case .route(let route):
-                navigation.push(route)
-                
-            case .pop: break
-            }
-        }
     }
 }
 
@@ -48,12 +38,8 @@ private extension AuthSelectView {
         Button(Localization.Sign.In.title) {
             viewModel.signInTapped()
         }
-        .disabled(false)
         .buttonStyle(
             AppButtonStyle()
-        )
-        .accessibilityIdentifier(
-            AuthUIIdentifiers.signInButton.rawValue
         )
         
         Button(Localization.Sign.Up.title) {
@@ -62,17 +48,10 @@ private extension AuthSelectView {
         .buttonStyle(
             AppButtonStyle()
         )
-        .accessibilityIdentifier(
-            AuthUIIdentifiers.signUpButton.rawValue
-        )
     }
 }
 
 // MARK: - Preview Provider
-struct AuthSelectView_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthSelectView(
-            viewModel: AuthSelectViewModelImpl()
-        )
-    }
+#Preview {
+    AuthSelectView(viewModel: AuthSelectViewModelImpl.placeholder)
 }

@@ -14,7 +14,8 @@ public struct HomeRoot: View {
     private let coordinator: Coordinator
     
     // MARK: - Init
-    public init(factory: HomeModuleFactory) {
+    public init(dependencies: HomeModuleFactory.Dependencies) {
+        let factory = HomeModuleFactory(dependencies)
         coordinator = HomeCoordinator(
             .init(),
             factory

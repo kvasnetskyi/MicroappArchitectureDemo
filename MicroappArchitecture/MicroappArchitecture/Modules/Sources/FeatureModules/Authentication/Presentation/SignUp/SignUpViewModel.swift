@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import Extensions
 import Base
 
 protocol SignUpViewModel: ViewModel {
@@ -58,7 +57,8 @@ extension SignUpViewModelImpl {
                 }
                 
                 self?.renderingState.render(.error(error))
-            }
+                
+            } receiveValue: { _ in }
             .store(in: &subscriptions)
     }
 }
@@ -76,4 +76,12 @@ private extension SignUpViewModelImpl {
             }
             .store(in: &subscriptions)
     }
+}
+
+// MARK: - Preview
+extension SignUpViewModelImpl {
+    static let placeholder = SignUpViewModelImpl(
+        SignUpModelImpl(dependencies: .placeholder),
+        signUpPassed: ()
+    )
 }

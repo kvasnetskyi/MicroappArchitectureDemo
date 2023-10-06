@@ -15,32 +15,30 @@ struct AuthFeatureMicroapp: App {
     var body: some Scene {
         WindowGroup {
             AuthRoot(
-                factory: .init(
+                dependencies: .init(
                     .init(
-                        .init(
-                            loginAction: { email, password in
-                                debugPrint("Login: \(email), \(password)")
-                                
-                                return Just(DummyUserData())
-                                    .setFailureType(to: NetworkError.self)
-                                    .eraseToAnyPublisher()
-                            },
-                            saveAction: { _ in
-                                debugPrint("Save user data")
-                            }
-                        ),
-                        .init(
-                            registration: { email, password in
-                                debugPrint("Sign Up: \(email), \(password)")
-                                
-                                return Just(DummyUserData())
-                                    .setFailureType(to: NetworkError.self)
-                                    .eraseToAnyPublisher()
-                            },
-                            saveAction: { _ in
-                                debugPrint("Save user data")
-                            }
-                        )
+                        loginAction: { email, password in
+                            debugPrint("Login: \(email), \(password)")
+                            
+                            return Just(DummyUserData())
+                                .setFailureType(to: NetworkError.self)
+                                .eraseToAnyPublisher()
+                        },
+                        saveAction: { _ in
+                            debugPrint("Save user data")
+                        }
+                    ),
+                    .init(
+                        registration: { email, password in
+                            debugPrint("Sign Up: \(email), \(password)")
+                            
+                            return Just(DummyUserData())
+                                .setFailureType(to: NetworkError.self)
+                                .eraseToAnyPublisher()
+                        },
+                        saveAction: { _ in
+                            debugPrint("Save user data")
+                        }
                     )
                 ),
                 signInPassed: (),

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Combine
 
 public protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get set }

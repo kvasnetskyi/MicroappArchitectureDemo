@@ -7,8 +7,6 @@
 
 import UIKit
 import Combine
-import Views
-import Resources
 
 open class BaseViewController<VM: ViewModel>: UIViewController {
     // MARK: - Public Properties

@@ -8,12 +8,11 @@
 import UIKit
 import SwiftUI
 import Combine
-import Helpers
 import Resources
 
 final public class LoadingView: UIView {
     // MARK: - Public Properties
-    @DidSet public var isLoading: Bool = false
+    @Published public var isLoading: Bool = false
     
     // MARK: - Private Properties
     private let indicator = UIActivityIndicatorView(style: .large)
@@ -33,7 +32,6 @@ final public class LoadingView: UIView {
 // MARK: - Private Methods
 private extension LoadingView {
     func commonInit() {
-        tag = C.tagValue
         backgroundColor = Colors.neutral10.color.withAlphaComponent(
             C.backgroundAlpha
         )
@@ -62,13 +60,6 @@ private extension LoadingView {
 }
 
 // MARK: - LoadingView + SwiftUI
-public extension LoadingView {
-    @ViewBuilder
-    static func swiftUIView(isLoading: Binding<Bool>) -> some View {
-        Loader(isLoading: isLoading)
-    }
-}
-
 struct Loader: UIViewRepresentable {
     @Binding public var isLoading: Bool
     
@@ -81,8 +72,14 @@ struct Loader: UIViewRepresentable {
     }
 }
 
+public extension LoadingView {
+    @ViewBuilder
+    static func swiftUIView(isLoading: Binding<Bool>) -> some View {
+        Loader(isLoading: isLoading)
+    }
+}
+
 // MARK: - Static Properties
 private struct C {
-    static let tagValue: Int = 1234123
     static let backgroundAlpha = 0.5
 }

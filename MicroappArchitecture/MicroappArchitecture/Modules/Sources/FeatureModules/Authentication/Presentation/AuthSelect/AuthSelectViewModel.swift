@@ -6,34 +6,35 @@
 //
 
 import Foundation
-import Combine
+import Navigation
 
 protocol AuthSelectViewModel: ObservableObject {
-    var transition: AnyPublisher<Transition, Never> { get }
-    
     func signInTapped()
     func signUpTapped()
 }
 
 final class AuthSelectViewModelImpl: AuthSelectViewModel {
-    // MARK: - Internal Properties
-    lazy var transition = transitionSubject.eraseToAnyPublisher()
-    
     // MARK: - Private Properties
-    private let transitionSubject = PassthroughSubject<Transition, Never>()
+    private let navigation: NavigationStore<Route>
+    
+    // MARK: - Init
+    init(navigation: NavigationStore<Route>) {
+        self.navigation = navigation
+    }
 }
 
 // MARK: - Internal Methods
 extension AuthSelectViewModelImpl {
     func signInTapped() {
-        transitionSubject.send(
-            .route(.signIn)
-        )
+        navigation.push(.signIn)
     }
     
     func signUpTapped() {
-        transitionSubject.send(
-            .route(.signUp)
-        )
+        navigation.push(.signUp)
     }
+}
+
+// MARK: - Placeholder
+extension AuthSelectViewModelImpl {
+    static let placeholder = AuthSelectViewModelImpl(navigation: .init())
 }

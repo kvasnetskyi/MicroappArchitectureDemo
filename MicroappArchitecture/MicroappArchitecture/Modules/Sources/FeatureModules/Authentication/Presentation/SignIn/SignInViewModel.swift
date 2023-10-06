@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import Extensions
 import Base
 
 protocol SignInViewModel: ViewModel {
@@ -56,7 +55,8 @@ extension SignInViewModelImpl {
                 }
                 
                 self?.renderingState.render(.error(error))
-            }
+                
+            } receiveValue: { _ in }
             .store(in: &subscriptions)
     }
 }
@@ -73,4 +73,12 @@ private extension SignInViewModelImpl {
             }
             .store(in: &subscriptions)
     }
+}
+
+// MARK: - Preview
+extension SignInViewModelImpl {
+    static let placeholder = SignInViewModelImpl(
+        SignInModelImpl(dependencies: .placeholder),
+        signInPassed: ()
+    )
 }

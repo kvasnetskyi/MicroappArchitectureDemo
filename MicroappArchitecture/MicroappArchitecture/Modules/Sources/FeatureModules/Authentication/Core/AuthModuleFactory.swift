@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Navigation
 
 public final class AuthModuleFactory {
     // MARK: - Dependencies
@@ -25,10 +26,12 @@ public final class AuthModuleFactory {
     
     // MARK: - Private Properties
     private let dependencies: Dependencies
+    private let navigation: NavigationStore<Route>
     
     // MARK: - Init
-    public init(_ dependencies: Dependencies) {
+    init(_ dependencies: Dependencies, _ navigation: NavigationStore<Route>) {
         self.dependencies = dependencies
+        self.navigation = navigation
     }
 }
 
@@ -37,7 +40,9 @@ extension AuthModuleFactory {
     @ViewBuilder
     func getAuthSelect() -> some View {
         AuthSelectView(
-            viewModel: AuthSelectViewModelImpl()
+            viewModel: AuthSelectViewModelImpl(
+                navigation: self.navigation
+            )
         )
     }
     

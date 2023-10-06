@@ -67,7 +67,6 @@ let package = Package(
                 // Utility
                 .target(name: "Base"),
                 .target(name: "Entities"),
-                .target(name: "Extensions"),
                 .target(name: "Navigation"),
                 
                 // UI
@@ -85,6 +84,7 @@ let package = Package(
                 .target(name: "Entities"),
                 .target(name: "Extensions"),
                 .target(name: "Navigation"),
+                .target(name: "Helpers"),
                 
                 // UI
                 .target(name: "Resources"),
@@ -159,8 +159,7 @@ let package = Package(
         .target(
             name: "Views",
             dependencies: [
-                .target(name: "Resources"),
-                .target(name: "Helpers")
+                .target(name: "Resources")
             ],
             path: "Sources/UIModules/Views"
         )

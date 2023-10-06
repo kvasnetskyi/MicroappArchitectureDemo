@@ -10,7 +10,7 @@ import Navigation
 
 public struct AuthRoot: View {
     // MARK: - Private Properties
-    @StateObject private var navigation = NavigationStore<Route>()
+    @StateObject private var navigation: NavigationStore<Route>
     
     private let factory: AuthModuleFactory
     private let signInPassed: () -> Void
@@ -18,11 +18,18 @@ public struct AuthRoot: View {
     
     // MARK: - Init
     public init(
-        factory: AuthModuleFactory,
+        dependencies: AuthModuleFactory.Dependencies,
         signInPassed: @escaping @autoclosure () -> Void,
         signUpPassed: @escaping @autoclosure () -> Void
     ) {
-        self.factory = factory
+        let navigation = NavigationStore<Route>()
+        _navigation = StateObject(wrappedValue: navigation)
+        
+        factory = AuthModuleFactory(
+            dependencies,
+            navigation
+        )
+        
         self.signInPassed = signInPassed
         self.signUpPassed = signUpPassed
     }
@@ -45,19 +52,14 @@ public struct AuthRoot: View {
                     }
                 }
         }
-        .environmentObject(navigation)
     }
 }
 
 // MARK: - Preview Provider
-struct AuthRoot_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthRoot(
-            factory: .init(
-                .init(.placeholder, .placeholder)
-            ),
-            signInPassed: (),
-            signUpPassed: ()
-        )
-    }
+#Preview {
+    AuthRoot(
+        dependencies: .init(.placeholder, .placeholder),
+        signInPassed: (),
+        signUpPassed: ()
+    )
 }
