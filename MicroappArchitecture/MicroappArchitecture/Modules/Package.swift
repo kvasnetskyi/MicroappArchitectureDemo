@@ -17,11 +17,10 @@ let package = Package(
         
         // MARK: - Utility
         .library(name: "UtilityModules", targets: [
-            "Base", "Entities", "Extensions", "Helpers", "Navigation"
+            "Base", "Entities", "Extensions", "Navigation"
         ]),
         .library(name: "Entities", targets: ["Entities"]),
         .library(name: "Extensions", targets: ["Extensions"]),
-        .library(name: "Helpers", targets: ["Helpers"]),
         .library(name: "Navigation", targets: ["Navigation"]),
         
         // MARK: - Foundation
@@ -51,12 +50,8 @@ let package = Package(
             .upToNextMajor(from: "2.8.3")
         ),
         .package(
-            url: "https://github.com/freshOS/KeyboardLayoutGuide",
-            .upToNextMajor(from: "1.8.0")
-        ),
-        .package(
             url: "https://github.com/onevcat/Kingfisher",
-            .upToNextMajor(from: "7.5.0")
+            .upToNextMajor(from: "7.9.1")
         )
     ],
     targets: [
@@ -84,7 +79,6 @@ let package = Package(
                 .target(name: "Entities"),
                 .target(name: "Extensions"),
                 .target(name: "Navigation"),
-                .target(name: "Helpers"),
                 
                 // UI
                 .target(name: "Resources"),
@@ -109,15 +103,7 @@ let package = Package(
         .target(name: "Entities", path: "Sources/UtilityModules/Entities"),
         .target(
             name: "Extensions",
-            dependencies: [.byName(name: "KeyboardLayoutGuide")],
             path: "Sources/UtilityModules/Extensions"
-        ),
-        .target(
-            name: "Helpers",
-            dependencies: [
-                .target(name: "Navigation"),
-            ],
-            path: "Sources/UtilityModules/Helpers"
         ),
         .target(name: "Navigation", path: "Sources/UtilityModules/Navigation"),
         

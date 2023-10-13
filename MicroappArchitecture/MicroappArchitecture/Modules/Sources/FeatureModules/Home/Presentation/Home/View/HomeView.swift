@@ -6,16 +6,13 @@
 //
 
 import UIKit
-import Combine
 import Extensions
 import Entities
-import Helpers
 
 final class HomeView: UIView {
     // MARK: - Private Properties
     private let tableView = UITableView()
     private var characters = [CharacterData]()
-    private var subscriptions = Set<AnyCancellable>()
     
     // MARK: - Init
     override init(frame: CGRect) {
@@ -34,10 +31,6 @@ extension HomeView {
         self.characters = characters
         self.tableView.reloadData()
     }
-    
-    func reloadData() {
-        tableView.reloadData()
-    }
 }
 
 // MARK: - Private Methods
@@ -50,7 +43,6 @@ private extension HomeView {
     func setupUI() {
         backgroundColor = .white
         tableView.dataSource = self
-        tableView.delegate = self
         tableView.backgroundColor = .white
         tableView.register(
             CharacterTVC.self,
@@ -64,7 +56,7 @@ private extension HomeView {
 }
 
 // MARK: - UITableViewDataSource
-extension HomeView: UITableViewDataSource, UITableViewDelegate {
+extension HomeView: UITableViewDataSource {
     func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
@@ -91,20 +83,4 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate {
 // MARK: - Static Properties
 private struct C {
     static let cellReuseIdentifier: String = "UITableViewCell"
-}
-
-// MARK: - Preview Provider
-import SwiftUI
-
-struct HomeViewPreview: PreviewProvider {
-    static var previews: some View {
-        ViewRepresentable(HomeView()) {
-            $0.show(
-                characters: [
-                    .placeholder,
-                    .placeholder
-                ]
-            )
-        }
-    }
 }

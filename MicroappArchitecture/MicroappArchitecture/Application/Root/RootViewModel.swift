@@ -15,7 +15,7 @@ final class RootViewModel: ObservableObject {
     
     // MARK: - Init
     init(
-        dependencies: Dependencies,
+        dependencies: Dependencies = DependenciesImpl(),
         currentFeature: Feature = .auth
     ) {
         self.dependencies = dependencies

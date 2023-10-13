@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "keyboardlayoutguide",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/freshOS/KeyboardLayoutGuide",
-      "state" : {
-        "revision" : "b14abc2ff6a6b934b81b7004edb65f910ac68bdc",
-        "version" : "1.8.0"
-      }
-    },
-    {
       "identity" : "keychainaccess",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kishikawakatsumi/KeychainAccess",

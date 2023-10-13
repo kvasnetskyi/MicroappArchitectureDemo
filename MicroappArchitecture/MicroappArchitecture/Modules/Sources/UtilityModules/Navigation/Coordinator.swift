@@ -5,7 +5,7 @@
 //  Created by Artem Kvasnetskyi on 04.01.2023.
 //
 
-import UIKit
+import SwiftUI
 
 public protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get set }
@@ -26,4 +26,27 @@ public extension Coordinator {
     func popToRoot(animated: Bool = true) {
         navigationController.popToRootViewController(animated: animated)
     }
+}
+
+// MARK: - UIViewControllerRepresentable
+public struct CoordinatorRepresentable: UIViewControllerRepresentable {
+    // MARK: - Private Properties
+    private let coordinator: Coordinator
+    
+    // MARK: - Init
+    public init(_ coordinator: Coordinator) {
+        self.coordinator = coordinator
+    }
+    
+    // MARK: - Public Methods
+    public func makeUIViewController(context: Context) -> UINavigationController {
+        coordinator.start()
+        
+        return coordinator.navigationController
+    }
+    
+    public func updateUIViewController(
+        _ uiViewController: UINavigationController,
+        context: Context
+    ) {}
 }

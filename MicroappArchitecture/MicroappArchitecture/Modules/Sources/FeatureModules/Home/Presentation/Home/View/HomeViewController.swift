@@ -15,6 +15,7 @@ final class HomeViewController<VM: HomeViewModel>: BaseViewController<VM> {
 
     // MARK: - Lifecycle
     override func loadView() {
+        super.loadView()
         view = contentView
     }
 

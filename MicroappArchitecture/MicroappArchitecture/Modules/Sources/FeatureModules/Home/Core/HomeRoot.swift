@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Navigation
-import Helpers
 
 public struct HomeRoot: View {
     // MARK: - Private Properties
@@ -15,11 +14,11 @@ public struct HomeRoot: View {
     
     // MARK: - Init
     public init(dependencies: HomeModuleFactory.Dependencies) {
-        let factory = HomeModuleFactory(dependencies)
-        coordinator = HomeCoordinator(
-            .init(),
-            factory
-        )
+        let coordinator = HomeCoordinator(.init())
+        let factory = HomeModuleFactory(dependencies, coordinator)
+        coordinator.factory = factory
+        
+        self.coordinator = coordinator
     }
     
     // MARK: - Body

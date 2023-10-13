@@ -80,11 +80,11 @@ private extension AppContainerImpl {
             let networkingHandler = resolver.resolve(NetworkingHandler.self)!
             let jsonPugin = JSONContentPlugin()
             let keyPlugin = APIKeyPlugin(
-                key: configuration.environment.authAPIKey
+                key: configuration.authAPIKey
             )
 
             let provider = CNProvider(
-                baseURL: configuration.environment.tokenBaseURL,
+                baseURL: configuration.tokenBaseURL,
                 errorHandler: networkingHandler,
                 requestBuilder: TokenAPIRequestBuilder.self,
                 plugins: [jsonPugin, keyPlugin]
@@ -99,11 +99,11 @@ private extension AppContainerImpl {
             let networkingHandler = resolver.resolve(NetworkingHandler.self)!
             let jsonPugin = JSONContentPlugin()
             let keyPlugin = APIKeyPlugin(
-                key: configuration.environment.authAPIKey
+                key: configuration.authAPIKey
             )
 
             let provider = CNProvider(
-                baseURL: configuration.environment.authBaseURL,
+                baseURL: configuration.authBaseURL,
                 errorHandler: networkingHandler,
                 requestBuilder: AuthAPIRequestBuilder.self,
                 plugins: [jsonPugin, keyPlugin]
@@ -120,7 +120,7 @@ private extension AppContainerImpl {
             let jsonPugin = JSONContentPlugin()
 
             let provider = CNProvider(
-                baseURL: configuration.environment.storageBaseURL,
+                baseURL: configuration.storageBaseURL,
                 errorHandler: networkingHandler,
                 requestBuilder: CharactersAPIRequestBuilder.self,
                 plugins: [jsonPugin, tokenPlugin]

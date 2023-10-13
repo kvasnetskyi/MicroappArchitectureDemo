@@ -23,7 +23,15 @@
 		<string>Montserrat-ThinItalic.ttf</string>
 		<string>Montserrat-Thin.ttf</string>
 	</array>
+	<key>AUTH_BASE_URL</key>
+	<string>$(AUTH_BASE_URL)</string>
+	<key>TOKEN_BASE_URL</key>
+	<string>$(TOKEN_BASE_URL)</string>
 	<key>APP_ENVIRONMENT</key>
 	<string>$(APP_ENVIRONMENT)</string>
+	<key>STORAGE_BASE_URL</key>
+	<string>$(STORAGE_BASE_URL)</string>
+	<key>AUTH_API_KEY</key>
+	<string>$(AUTH_API_KEY)</string>
 </dict>
 </plist>

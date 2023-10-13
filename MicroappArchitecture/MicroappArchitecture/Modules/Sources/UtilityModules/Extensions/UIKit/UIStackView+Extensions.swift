@@ -20,13 +20,6 @@ public extension UIStackView {
         self.spacing = spacing
     }
 
-    func removeAllViews() {
-        arrangedSubviews.forEach {
-            removeArrangedSubview($0)
-            $0.removeFromSuperview()
-        }
-    }
-
     func addSpacer(_ size: CGFloat? = nil) {
         let spacer = UIView()
         spacer.backgroundColor = .clear
@@ -39,7 +32,8 @@ public extension UIStackView {
     ) {
         addArrangedSubview(view)
         
-        guard let size = size else { return }
+        guard let size else { return }
+        
         switch axis {
         case .vertical:
             view.heightAnchor.constraint(
@@ -55,31 +49,5 @@ public extension UIStackView {
             
         default: return
         }
-    }
-
-    func addCentered(_ view: UIView, inset: CGFloat, size: CGFloat? = nil) {
-        let stack = UIStackView()
-        switch axis {
-        case .vertical:
-            stack.setup(
-                axis: .horizontal,
-                alignment: .fill,
-                distribution: .fill,
-                spacing: .zero
-            )
-        case .horizontal:
-            stack.setup(
-                axis: .vertical,
-                alignment: .fill,
-                distribution: .fill,
-                spacing: .zero
-            )
-        default: return
-        }
-        
-        stack.addSpacer(inset)
-        stack.addArranged(view)
-        stack.addSpacer(inset)
-        addArranged(stack, size: size)
     }
 }

@@ -9,16 +9,13 @@
 /* Begin PBXBuildFile section */
 		CE8379FB296741F20047082F /* FeatureModules in Frameworks */ = {isa = PBXBuildFile; productRef = CE8379FA296741F20047082F /* FeatureModules */; };
 		CE8379FD296742740047082F /* FoundationModules in Frameworks */ = {isa = PBXBuildFile; productRef = CE8379FC296742740047082F /* FoundationModules */; };
-		CE947A3028F69A8A006B7293 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE947A2F28F69A8A006B7293 /* Environment.swift */; };
 		CE947A3228F69AB0006B7293 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE947A3128F69AB0006B7293 /* Configuration.swift */; };
 		CEB1BCFA28F41A6600DF36AC /* MicroappArchitectureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1BCF928F41A6600DF36AC /* MicroappArchitectureApp.swift */; };
 		CEB1BCFE28F41A6700DF36AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB1BCFD28F41A6700DF36AC /* Assets.xcassets */; };
 		CEB1BD0128F41A6700DF36AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB1BD0028F41A6700DF36AC /* Preview Assets.xcassets */; };
-		CED1BC0A296C267100024A41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1BC09296C267100024A41 /* AppDelegate.swift */; };
 		CED1BC10296C28B200024A41 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1BC0F296C28B200024A41 /* RootView.swift */; };
 		CED1BC12296C29EA00024A41 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1BC11296C29EA00024A41 /* RootViewModel.swift */; };
 		CEF01234299D749C000D2082 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF01232299D749C000D2082 /* Dependencies.swift */; };
-		CEF01235299D749C000D2082 /* StubDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF01233299D749C000D2082 /* StubDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,17 +24,14 @@
 		CE947A2028F6979D006B7293 /* Configuration-Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Configuration-Staging.xcconfig"; sourceTree = "<group>"; };
 		CE947A2128F697EA006B7293 /* Configuration-Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Configuration-Production.xcconfig"; sourceTree = "<group>"; };
 		CE947A2E28F699B2006B7293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE947A2F28F69A8A006B7293 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CE947A3128F69AB0006B7293 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		CEB1BCF628F41A6600DF36AC /* MicroappArchitectureDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroappArchitectureDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB1BCF928F41A6600DF36AC /* MicroappArchitectureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroappArchitectureApp.swift; sourceTree = "<group>"; };
 		CEB1BCFD28F41A6700DF36AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB1BD0028F41A6700DF36AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CED1BC09296C267100024A41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED1BC0F296C28B200024A41 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		CED1BC11296C29EA00024A41 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		CEF01232299D749C000D2082 /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
-		CEF01233299D749C000D2082 /* StubDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +67,7 @@
 		CE947A1B28F696EE006B7293 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				CED1BC0E296C289200024A41 /* Application */,
+				CEB1BCF928F41A6600DF36AC /* MicroappArchitectureApp.swift */,
 				CED1BC0D296C278A00024A41 /* Root */,
 				CE947A1D28F6970A006B7293 /* Configuration */,
 			);
@@ -83,7 +77,6 @@
 		CE947A1D28F6970A006B7293 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				CE947A2F28F69A8A006B7293 /* Environment.swift */,
 				CE947A3128F69AB0006B7293 /* Configuration.swift */,
 				CE947A1E28F6973E006B7293 /* Configurations */,
 			);
@@ -138,29 +131,11 @@
 		CED1BC0D296C278A00024A41 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				CEF01231299D749C000D2082 /* Dependency */,
+				CEF01232299D749C000D2082 /* Dependencies.swift */,
 				CED1BC11296C29EA00024A41 /* RootViewModel.swift */,
 				CED1BC0F296C28B200024A41 /* RootView.swift */,
 			);
 			path = Root;
-			sourceTree = "<group>";
-		};
-		CED1BC0E296C289200024A41 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				CEB1BCF928F41A6600DF36AC /* MicroappArchitectureApp.swift */,
-				CED1BC09296C267100024A41 /* AppDelegate.swift */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		CEF01231299D749C000D2082 /* Dependency */ = {
-			isa = PBXGroup;
-			children = (
-				CEF01232299D749C000D2082 /* Dependencies.swift */,
-				CEF01233299D749C000D2082 /* StubDependencies.swift */,
-			);
-			path = Dependency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +218,6 @@
 				CEB1BCFA28F41A6600DF36AC /* MicroappArchitectureApp.swift in Sources */,
 				CED1BC12296C29EA00024A41 /* RootViewModel.swift in Sources */,
 				CE947A3228F69AB0006B7293 /* Configuration.swift in Sources */,
-				CED1BC0A296C267100024A41 /* AppDelegate.swift in Sources */,
-				CE947A3028F69A8A006B7293 /* Environment.swift in Sources */,
-				CEF01235299D749C000D2082 /* StubDependencies.swift in Sources */,
 				CED1BC10296C28B200024A41 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,17 +11,11 @@ import UIKit
 final class HomeCoordinator: Coordinator {
     // MARK: - Internal Properties
     var navigationController: UINavigationController
-    
-    // MARK: - Private Properties
-    private let factory: HomeModuleFactory
+    var factory: HomeModuleFactory!
     
     // MARK: - Init
-    init(
-        _ navigationController: UINavigationController,
-        _ factory: HomeModuleFactory
-    ) {
+    init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.factory = factory
     }
 }
 

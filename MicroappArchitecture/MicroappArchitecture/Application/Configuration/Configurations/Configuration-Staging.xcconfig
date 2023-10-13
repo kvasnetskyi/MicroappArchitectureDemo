@@ -11,3 +11,7 @@
 APP_ENVIRONMENT = staging
 APP_NAME = MicroappArchitectureStaging
 APP_BUNDLE_ID = com.kvasnetskyi.MicroappArchitecture.stage
+STORAGE_BASE_URL = https:/$()/rickandmortydemo-default-rtdb.europe-west1.firebasedatabase.app
+AUTH_BASE_URL = https:/$()/identitytoolkit.googleapis.com
+TOKEN_BASE_URL = https:/$()/securetoken.googleapis.com
+AUTH_API_KEY = AIzaSyCa09W5VQZtpWaVT0ua0mNbhvpM6tibLJk

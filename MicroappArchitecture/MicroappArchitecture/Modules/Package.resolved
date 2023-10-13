@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "keyboardlayoutguide",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/freshOS/KeyboardLayoutGuide",
-      "state" : {
-        "revision" : "b14abc2ff6a6b934b81b7004edb65f910ac68bdc",
-        "version" : "1.8.0"
-      }
-    },
-    {
       "identity" : "keychainaccess",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
@@ -32,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher",
       "state" : {
-        "revision" : "90135885ef506506620c4911cefb55a95ca2a9a2",
-        "version" : "7.5.0"
+        "revision" : "b6f62758f21a8c03cd64f4009c037cfa580a256e",
+        "version" : "7.9.1"
       }
     },
     {

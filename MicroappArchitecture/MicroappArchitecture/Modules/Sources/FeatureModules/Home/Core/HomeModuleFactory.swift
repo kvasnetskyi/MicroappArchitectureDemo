@@ -22,10 +22,12 @@ public final class HomeModuleFactory {
     
     // MARK: - Private Properties
     private let dependencies: Dependencies
+    private weak var coordinator: HomeCoordinator?
     
     // MARK: - Init
-    public init(_ dependencies: Dependencies) {
+    init(_ dependencies: Dependencies, _ coordinator: HomeCoordinator) {
         self.dependencies = dependencies
+        self.coordinator = coordinator
     }
 }
 

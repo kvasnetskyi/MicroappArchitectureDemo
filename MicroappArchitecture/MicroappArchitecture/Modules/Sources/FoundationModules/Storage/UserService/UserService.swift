@@ -5,7 +5,6 @@
 //
 
 import Foundation
-import KeychainAccess
 import Entities
 
 public protocol UserService: AnyObject {
